@@ -1,6 +1,6 @@
-
 # github cli install
-https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+install manual
+>> https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 
 ```bash
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
