@@ -10,7 +10,7 @@
 
 ## github cli install
 
-install manual  
+install manual
 > <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
 
 ```bash
@@ -41,7 +41,13 @@ gh repo create {repo-name}
 
 ```bash
 curl -f -I -L https://api.github.com/users/2f0833e717/repos
-curl -f -s -L https://api.github.com/users/2f0833e717/repos | grep "clone_url" | sed -e "s/\"clone_url\"\:\s\"//" | sed -e "s/\"\,$//"
+```
+
+```bash
+curl -f -s -L https://api.github.com/users/2f0833e717/repos | \
+grep "clone_url" | \
+sed -e "s/\"clone_url\"\:\s\"//" | \
+sed -e "s/\"\,$//"
 ```
 
 > <https://mseeeen.msen.jp/github-api-get-all-repos-info/>
