@@ -22,6 +22,9 @@ sudo apt install gh
 gh auth login
 ```
 
+as browser, ssh
+
+get access-token
 > <https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token>
 
 ```bash
@@ -50,6 +53,8 @@ sed -e "s/\"clone_url\"\:\s\"//" | \
 sed -e "s/\"\,$//"
 ```
 
+# github ssh connnection
+> <https://qiita.com/shizuma/items/2b2f873a0034839e47ce>
 > <https://mseeeen.msen.jp/github-api-get-all-repos-info/>
 
 ---
