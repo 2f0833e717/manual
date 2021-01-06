@@ -1,4 +1,4 @@
-# manual
+# GitHub manual
 
 <!-- # Badges -->
 
@@ -53,7 +53,9 @@ sed -e "s/\"clone_url\"\:\s\"//" | \
 sed -e "s/\"\,$//"
 ```
 
-# github ssh connnection
+---
+
+## github ssh connnection
 > <https://qiita.com/shizuma/items/2b2f873a0034839e47ce>
 > <https://mseeeen.msen.jp/github-api-get-all-repos-info/>
 
@@ -91,8 +93,11 @@ test: Adding missing or correcting existing tests
 chore: Changes to the build process or auxiliary tools and libraries such as documentation generation  
 > <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type>  
 
+---
+
+# Bash manual
+> <http://www.tohoho-web.com/ex/shell.html>
 
 ---
 
-# bash manual
-> <http://www.tohoho-web.com/ex/shell.html>
+ 
