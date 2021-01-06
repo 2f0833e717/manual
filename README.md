@@ -90,3 +90,9 @@ perf: A code change that improves performance
 test: Adding missing or correcting existing tests  
 chore: Changes to the build process or auxiliary tools and libraries such as documentation generation  
 > <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type>  
+
+
+---
+
+# bash manual
+> <http://www.tohoho-web.com/ex/shell.html>
