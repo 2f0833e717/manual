@@ -1,5 +1,5 @@
 # GitHub manual
-
+ 
 <!-- # Badges -->
 
 [![Github issues](https://img.shields.io/github/issues/2f0833e717/manual)](https://github.com/2f0833e717/manual/issues)
@@ -99,4 +99,3 @@ chore: Changes to the build process or auxiliary tools and libraries such as doc
 > <http://www.tohoho-web.com/ex/shell.html>
 
 ---
-a
