@@ -297,5 +297,3 @@ doctoc use
 ```bash
 doctoc .
 ```
-
----
