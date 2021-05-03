@@ -39,9 +39,8 @@
 * Download on Microsoft Store
 * Launch on Microsoft Store
 
+Launch Ubuntu-20.04 Terminal
 ```bash
-# Launch Ubuntu-20.04 Terminal
-
 # UserName
 ubuntu
 
@@ -51,8 +50,8 @@ ubuntu
 exit
 ```
 
+Windows Terminal
 ```bash
-# Windows Terminal
 
 wsl -l
 wsl -s Ubuntu-20.04
