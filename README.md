@@ -22,7 +22,7 @@
   - [github ssh connnection](#github-ssh-connnection)
   - [setting .gitconfig](#setting-gitconfig)
   - [github cli install](#github-cli-install)
-  - [github get repositorys](#github-get-repositorys)
+  - [github get repositorys (api)](#github-get-repositorys-api)
   - [git commit message sample](#git-commit-message-sample)
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
