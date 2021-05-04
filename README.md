@@ -1,5 +1,5 @@
 # Manual
- 
+
 <!-- # Badges -->
 
 [![Github issues](https://img.shields.io/github/issues/2f0833e717/manual)](https://github.com/2f0833e717/manual/issues)
@@ -10,7 +10,6 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
 
 - [WSL Manual](#wsl-manual)
   - [wsl install](#wsl-install)
@@ -43,10 +42,11 @@
 
 > <https://docs.microsoft.com/ja-jp/windows/wsl/install-win10>
 
-* Download on Microsoft Store
-* Launch on Microsoft Store
+- Download on Microsoft Store
+- Launch on Microsoft Store
 
 Launch Ubuntu-20.04 Terminal
+
 ```bash
 # UserName
 ubuntu
@@ -58,6 +58,7 @@ exit
 ```
 
 Windows Terminal
+
 ```bash
 # settings default distro
 wsl -s Ubuntu-20.04
@@ -72,14 +73,16 @@ wsl
 ---
 
 ## wsl uninstall
-* {Win-key} + i
-* application
-* serch `Ubuntu-20.04`
-* uninstall
+
+- {Win-key} + i
+- application
+- serch `Ubuntu-20.04`
+- uninstall
 
 ---
 
 ## bash and dotfile settings
+
 ```bash
 mkdir -p ~/work
 cd ~/work
@@ -92,7 +95,9 @@ cd
 ---
 
 ## package install and update
+
 ### apt update
+
 > <https://qiita.com/SUZUKI_Masaya/items/1fd9489e631c78e5b007>
 
 ```bash
@@ -105,6 +110,7 @@ sudo apt clean -y;
 ```
 
 ### homebrew install
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -126,6 +132,7 @@ wsl
 ```
 
 ### brew update
+
 ```bash
 brew update ; \
 brew upgrade ; \
@@ -173,12 +180,13 @@ clip.exe < ~/.ssh/id_rsa.pub
 ```
 
 Move to
+
 > <https://github.com/settings/keys>
 
-* [New SSH Key]
-* id_rsa
-* Ctrl + V
-* [Add SSH Key]
+- [New SSH Key]
+- id_rsa
+- Ctrl + V
+- [Add SSH Key]
 
 ```bash
 # vi ~/.ssh/config
@@ -192,7 +200,7 @@ Host github github.com
 # connection ssh
 ssh -T github
 
-# Are you sure you want to continue 
+# Are you sure you want to continue
 # connecting (yes/no/[fingerprint])? yes
 yes
 ```
@@ -200,6 +208,7 @@ yes
 ---
 
 ## setting .gitconfig
+
 ```bash
 # vi ~/.gitconfig
 [url "github:"]
@@ -209,7 +218,9 @@ yes
 	name = 2f0833e717
 	email = skinoshita202001082135@gmail.com
 ```
+
 or
+
 ```bash
 git config --global user.email "skinoshita202001082135@gmail.com"
 git config --global user.name "2f0833e717"
@@ -220,6 +231,7 @@ git config --global user.name "2f0833e717"
 ## github cli install
 
 install manual
+
 > <https://github.com/cli/cli#macos>
 
 ```bash
@@ -243,9 +255,11 @@ gh auth login
 ```
 
 get access-token
+
 > <https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token>
 
 github cli manual
+
 > <https://cli.github.com/manual/gh_pr_merge>
 
 ---
@@ -282,8 +296,9 @@ style: Changes that do not affect the meaning of the code (white-space, formatti
 refactor: A code change that neither fixes a bug nor adds a feature  
 perf: A code change that improves performance  
 test: Adding missing or correcting existing tests  
-chore: Changes to the build process or auxiliary tools and libraries such as documentation generation  
-> <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type>  
+chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+> <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type>
 
 ---
 
@@ -363,6 +378,7 @@ fi
 ---
 
 ## doctoc install
+
 > <https://github.com/thlorenz/doctoc>
 
 ```bash
@@ -376,6 +392,7 @@ touch .github/workflows/toc.yml
 ```
 
 doctoc setting
+
 ```bash
 # vi .github/workflows/toc.yml
 on: push
@@ -389,6 +406,7 @@ jobs:
 ```
 
 doctoc use
+
 ```bash
 doctoc .
 ```
