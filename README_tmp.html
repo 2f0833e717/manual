@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="manual">Manual</h1>
+<!-- # Badges -->
+<p><a href="https://github.com/2f0833e717/manual/issues"><img src="https://img.shields.io/github/issues/2f0833e717/manual" alt="Github issues"></a>
+<a href="https://github.com/2f0833e717/manual/network/members"><img src="https://img.shields.io/github/forks/2f0833e717/manual" alt="Github forks"></a>
+<a href="https://github.com/2f0833e717/manual/stargazers"><img src="https://img.shields.io/github/stars/2f0833e717/manual" alt="Github stars"></a>
+<a href="https://github.com/2f0833e717/manual/"><img src="https://img.shields.io/github/languages/top/2f0833e717/manual" alt="Github top language"></a>
+<a href="https://github.com/2f0833e717/manual/"><img src="https://img.shields.io/github/license/2f0833e717/manual" alt="Github license"></a></p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#wsl-manual">WSL Manual</a>
+<ul>
+<li><a href="#wsl-install">wsl install</a></li>
+<li><a href="#wsl-uninstall">wsl uninstall</a></li>
+<li><a href="#bash-and-dotfile-settings">bash and dotfile settings</a></li>
+<li><a href="#package-install-and-update">package install and update</a>
+<ul>
+<li><a href="#apt-update">apt update</a></li>
+<li><a href="#homebrew-install">homebrew install</a></li>
+<li><a href="#brew-update">brew update</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#github-manual">Github Manual</a>
+<ul>
+<li><a href="#github-ssh-connnection">github ssh connnection</a></li>
+<li><a href="#setting-gitconfig">setting .gitconfig</a></li>
+<li><a href="#github-cli-install">github cli install</a></li>
+<li><a href="#github-get-repositorys-api">github get repositorys (api)</a></li>
+<li><a href="#git-commit-message-sample">git commit message sample</a></li>
+</ul>
+</li>
+<li><a href="#docker-manual">Docker Manual</a>
+<ul>
+<li><a href="#docker-install">Docker Install</a></li>
+<li><a href="#docker-uninstall">Docker Uninstall</a></li>
+<li><a href="#docker-compose-install">docker-compose install</a>
+<ul>
+<li><a href="#python3-and-pip-install">python3 and pip install</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#npm-manual">npm Manual</a>
+<ul>
+<li><a href="#nvm-install">nvm install</a></li>
+<li><a href="#doctoc-install">doctoc install</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h1 id="wsl-manual">WSL Manual</h1>
+<h2 id="wsl-install">wsl install</h2>
+<blockquote>
+<p><a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10">https://docs.microsoft.com/ja-jp/windows/wsl/install-win10</a></p>
+</blockquote>
+<ul>
+<li>Download on Microsoft Store</li>
+<li>Launch on Microsoft Store</li>
+</ul>
+<p>Launch Ubuntu-20.04 Terminal</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># UserName</span>
+ubuntu
+
+<span class="hljs-comment"># Password</span>
+ubuntu
+
+<span class="hljs-built_in">exit</span>
+</div></code></pre>
+<p>Windows Terminal</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># settings default distro</span>
+wsl -s Ubuntu-20.04
+
+<span class="hljs-comment"># settings default distro view</span>
+wsl -l
+
+<span class="hljs-comment"># launch wsl</span>
+wsl
+</div></code></pre>
+<hr>
+<h2 id="wsl-uninstall">wsl uninstall</h2>
+<ul>
+<li>{Win-key} + i</li>
+<li>application</li>
+<li>serch <code>Ubuntu-20.04</code></li>
+<li>uninstall</li>
+</ul>
+<hr>
+<h2 id="bash-and-dotfile-settings">bash and dotfile settings</h2>
+<pre class="hljs"><code><div>mkdir -p ~/work
+<span class="hljs-built_in">cd</span> ~/work
+git <span class="hljs-built_in">clone</span> https://github.com/2f0833e717/dotfile
+<span class="hljs-built_in">cd</span> dotfile
+cp -rf ./ ~/
+<span class="hljs-built_in">cd</span>
+</div></code></pre>
+<hr>
+<h2 id="package-install-and-update">package install and update</h2>
+<h3 id="apt-update">apt update</h3>
+<blockquote>
+<p><a href="https://qiita.com/SUZUKI_Masaya/items/1fd9489e631c78e5b007">https://qiita.com/SUZUKI_Masaya/items/1fd9489e631c78e5b007</a></p>
+</blockquote>
+<pre class="hljs"><code><div>sudo apt update -y; \
+sudo apt upgrade -y; \
+sudo apt full-upgrade -y; \
+sudo apt autoremove -y; \
+sudo apt autoclean -y; \
+sudo apt clean -y;
+</div></code></pre>
+<h3 id="homebrew-install">homebrew install</h3>
+<pre class="hljs"><code><div>/bin/bash -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>"</span>
+
+<span class="hljs-comment"># Next steps:</span>
+<span class="hljs-comment"># - Add Homebrew to your PATH in /home/ubuntu/.profile:</span>
+<span class="hljs-comment">################</span>
+<span class="hljs-comment"># memo: not work /home/ubuntu/.profile</span>
+<span class="hljs-comment">#       OK       /home/ubuntu/.bashrc</span>
+<span class="hljs-comment">################</span>
+<span class="hljs-comment"># echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' &gt;&gt; /home/ubuntu/.bashrc # ~/.bashrc</span>
+<span class="hljs-comment"># eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # one time setting</span>
+cat ~/.bashrc <span class="hljs-comment"># check your ~/.bashrc</span>
+
+<span class="hljs-comment"># reload wsl</span>
+<span class="hljs-comment"># on wsl</span>
+<span class="hljs-built_in">exit</span>
+<span class="hljs-comment"># on Windows Terminal</span>
+wsl
+</div></code></pre>
+<h3 id="brew-update">brew update</h3>
+<pre class="hljs"><code><div>brew update ; \
+brew upgrade ; \
+brew doctor ; \
+<span class="hljs-comment"># brew prune  # is old command @ Homebrew 1.9.0</span>
+brew cleanup ;
+</div></code></pre>
+<hr>
+<h1 id="github-manual">Github Manual</h1>
+<h2 id="github-ssh-connnection">github ssh connnection</h2>
+<blockquote>
+<p><a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">https://qiita.com/shizuma/items/2b2f873a0034839e47ce</a></p>
+</blockquote>
+<pre class="hljs"><code><div><span class="hljs-comment"># generate ssh key</span>
+ssh-keygen -t rsa
+<span class="hljs-comment"># =&gt; {Enter x 3}</span>
+
+<span class="hljs-comment"># Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):</span>
+<span class="hljs-comment"># Created directory '/home/ubuntu/.ssh'.</span>
+<span class="hljs-comment"># Enter passphrase (empty for no passphrase):</span>
+<span class="hljs-comment"># Enter same passphrase again:</span>
+<span class="hljs-comment"># Your identification has been saved in /home/ubuntu/.ssh/id_rsa</span>
+<span class="hljs-comment"># Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub</span>
+<span class="hljs-comment"># The key fingerprint is:</span>
+<span class="hljs-comment"># SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ubuntu@xxxxxxx-xxxxxxx</span>
+<span class="hljs-comment"># The key's randomart image is:</span>
+<span class="hljs-comment"># +---[RSA 3072]----+</span>
+<span class="hljs-comment"># |=+.. .           |</span>
+<span class="hljs-comment"># |o+= +..          |</span>
+<span class="hljs-comment"># |.o.+o+=.         |</span>
+<span class="hljs-comment"># |. ...*+o        +|</span>
+<span class="hljs-comment"># |    .oE.S      +=|</span>
+<span class="hljs-comment"># |    . o+..     ==|</span>
+<span class="hljs-comment"># |     o .....  o.=|</span>
+<span class="hljs-comment"># |      ... o.oo o.|</span>
+<span class="hljs-comment"># |       oo  =+ .  |</span>
+<span class="hljs-comment"># +----[SHA256]-----+</span>
+
+<span class="hljs-comment"># Windows(wsl) only</span>
+clip.exe &lt; ~/.ssh/id_rsa.pub
+</div></code></pre>
+<p>Move to</p>
+<blockquote>
+<p><a href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
+</blockquote>
+<ul>
+<li>[New SSH Key]</li>
+<li>id_rsa</li>
+<li>Ctrl + V</li>
+<li>[Add SSH Key]</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># vi ~/.ssh/config</span>
+Host github github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
+  User git
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># connection ssh</span>
+ssh -T github
+
+<span class="hljs-comment"># Are you sure you want to continue </span>
+<span class="hljs-comment"># connecting (yes/no/[fingerprint])? yes</span>
+yes
+</div></code></pre>
+<hr>
+<h2 id="setting-gitconfig">setting .gitconfig</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># vi ~/.gitconfig</span>
+[url <span class="hljs-string">"github:"</span>]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com:
+[user]
+	name = 2f0833e717
+	email = skinoshita202001082135@gmail.com
+</div></code></pre>
+<p>or</p>
+<pre class="hljs"><code><div>git config --global user.email <span class="hljs-string">"skinoshita202001082135@gmail.com"</span>
+git config --global user.name <span class="hljs-string">"2f0833e717"</span>
+</div></code></pre>
+<hr>
+<h2 id="github-cli-install">github cli install</h2>
+<p>install manual</p>
+<blockquote>
+<p><a href="https://github.com/cli/cli#macos">https://github.com/cli/cli#macos</a></p>
+</blockquote>
+<pre class="hljs"><code><div><span class="hljs-comment"># gh is homebrew only now...(linux install fail)</span>
+brew install gh
+brew upgrade gh
+<span class="hljs-comment"># brew uninstall gh</span>
+brew list
+
+gh auth login
+<span class="hljs-comment"># * Github.com</span>
+<span class="hljs-comment"># * SSH</span>
+<span class="hljs-comment"># * /home/ubuntu/.ssh/id_rsa.pub</span>
+<span class="hljs-comment"># * Login with a web browser</span>
+<span class="hljs-comment"># First copy your one-time code: XXXX-XXXX</span>
+<span class="hljs-comment"># Enter =&gt; open browser</span>
+<span class="hljs-comment"># Contrl + V</span>
+<span class="hljs-comment"># [Authorize github]</span>
+<span class="hljs-comment"># Login</span>
+<span class="hljs-comment"># Enter =&gt; Logged in</span>
+</div></code></pre>
+<p>get access-token</p>
+<blockquote>
+<p><a href="https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token</a></p>
+</blockquote>
+<p>github cli manual</p>
+<blockquote>
+<p><a href="https://cli.github.com/manual/gh_pr_merge">https://cli.github.com/manual/gh_pr_merge</a></p>
+</blockquote>
+<hr>
+<h2 id="github-get-repositorys-api">github get repositorys (api)</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># user-name:2f0833e717</span>
+curl -f -I -L https://api.github.com/users/2f0833e717/repos
+</div></code></pre>
+<p>or</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># user-name:2f0833e717</span>
+curl -f -s -L https://api.github.com/users/2f0833e717/repos | \
+grep <span class="hljs-string">"clone_url"</span> | \
+sed -e <span class="hljs-string">"s/\"clone_url\"\:\s\"//"</span> | \
+sed -e <span class="hljs-string">"s/\"\,$//"</span>
+</div></code></pre>
+<hr>
+<h2 id="git-commit-message-sample">git commit message sample</h2>
+<pre class="hljs"><code><div>git commit -m <span class="hljs-string">"{commit-message}"</span>
+</div></code></pre>
+<p>feat: A new feature<br>
+fix: A bug fix<br>
+docs: Documentation only changes<br>
+style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)<br>
+refactor: A code change that neither fixes a bug nor adds a feature<br>
+perf: A code change that improves performance<br>
+test: Adding missing or correcting existing tests<br>
+chore: Changes to the build process or auxiliary tools and libraries such as documentation generation</p>
+<blockquote>
+<p><a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type">https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type</a></p>
+</blockquote>
+<hr>
+<h1 id="docker-manual">Docker Manual</h1>
+<h2 id="docker-install">Docker Install</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># instant docker install shell</span>
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+<span class="hljs-comment"># view docker version</span>
+docker -v
+</div></code></pre>
+<hr>
+<h2 id="docker-uninstall">Docker Uninstall</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># docker uninstall</span>
+sudo apt-get purge docker-ce docker-ce-cli containerd.io -y
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+</div></code></pre>
+<hr>
+<h2 id="docker-compose-install">docker-compose install</h2>
+<h3 id="python3-and-pip-install">python3 and pip install</h3>
+<pre class="hljs"><code><div><span class="hljs-comment"># python3 and pip install</span>
+sudo apt install python3 python3-pip -y
+
+<span class="hljs-comment"># pip setting</span>
+sudo pip3 install pip -U
+
+<span class="hljs-comment"># view pip version</span>
+pip -V
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># docker-compose install</span>
+pip install docker-compose
+
+<span class="hljs-comment"># view docker-compose version</span>
+docker-compose -v
+</div></code></pre>
+<hr>
+<h1 id="npm-manual">npm Manual</h1>
+<h2 id="nvm-install">nvm install</h2>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/creationix/nvm.git ~/.nvm
+<span class="hljs-built_in">source</span> ~/.nvm/nvm.sh
+
+<span class="hljs-comment"># install node lts version</span>
+nvm install --lts
+
+<span class="hljs-comment"># view nvm version</span>
+nvm -v
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># ~/.bashrc</span>
+<span class="hljs-keyword">if</span> [ -s ~/.nvm/nvm.sh ]; <span class="hljs-keyword">then</span>
+  <span class="hljs-built_in">source</span> ~/.nvm/nvm.sh
+<span class="hljs-keyword">fi</span>
+</div></code></pre>
+<hr>
+<h2 id="doctoc-install">doctoc install</h2>
+<blockquote>
+<p><a href="https://github.com/thlorenz/doctoc">https://github.com/thlorenz/doctoc</a></p>
+</blockquote>
+<pre class="hljs"><code><div><span class="hljs-comment"># sudo npm install -g doctoc # ?</span>
+npm install -g doctoc
+
+<span class="hljs-comment"># on root project folder</span>
+<span class="hljs-comment"># cd {project-folder}</span>
+mkdir -p .github/workflows
+touch .github/workflows/toc.yml
+</div></code></pre>
+<p>doctoc setting</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># vi .github/workflows/toc.yml</span>
+on: push
+name: TOC Generator
+<span class="hljs-built_in">jobs</span>:
+  generateTOC:
+    name: TOC Generator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: technote-space/toc-generator@v4
+</div></code></pre>
+<p>doctoc use</p>
+<pre class="hljs"><code><div>doctoc .
+</div></code></pre>
+
+</body>
+</html>
