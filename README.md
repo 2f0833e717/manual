@@ -297,7 +297,7 @@ mkdir -p .github/workflows
 touch .github/workflows/toc.yml
 ```
 
-doctoc ettings
+doctoc settings
 ```bash
 # vi .github/workflows/toc.yml
 on: push
