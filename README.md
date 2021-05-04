@@ -14,10 +14,12 @@
 
 - [WSL Manual](#wsl-manual)
   - [wsl install](#wsl-install)
+  - [wsl uninstall](#wsl-uninstall)
+  - [bash and dotfile settings](#bash-and-dotfile-settings)
+  - [package install and update](#package-install-and-update)
     - [apt update](#apt-update)
     - [homebrew install](#homebrew-install)
     - [brew update](#brew-update)
-  - [wsl uninstall](#wsl-uninstall)
 - [Github Manual](#github-manual)
   - [github ssh connnection](#github-ssh-connnection)
   - [setting .gitconfig](#setting-gitconfig)
@@ -62,6 +64,29 @@ wsl -l
 wsl
 ```
 
+---
+
+## wsl uninstall
+* {Win-key} + i
+* application
+* serch `Ubuntu-20.04`
+* uninstall
+
+---
+
+## bash and dotfile settings
+```bash
+mkdir -p ~/work
+cd ~/work
+git clone https://github.com/2f0833e717/dotfile
+cd dotfile
+cp -rf ./ ~/
+cd
+```
+
+---
+
+## package install and update
 ### apt update
 > <https://qiita.com/SUZUKI_Masaya/items/1fd9489e631c78e5b007>
 
@@ -80,8 +105,13 @@ sudo apt clean -y;
 
 # Next steps:
 # - Add Homebrew to your PATH in /home/ubuntu/.profile:
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/ubuntu/.profile
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+################
+# memo: not work /home/ubuntu/.profile
+#       OK       /home/ubuntu/.bashrc
+################
+# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/ubuntu/.bashrc # ~/.bashrc
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # one time setting
+cat ~/.bashrc # check your ~/.bashrc
 
 # reload wsl
 # on wsl
@@ -98,14 +128,6 @@ brew doctor ; \
 # brew prune  # is old command @ Homebrew 1.9.0
 brew cleanup ;
 ```
-
----
-
-## wsl uninstall
-* {Win-key} + i
-* application
-* serch `Ubuntu-20.04`
-* uninstall
 
 ---
 
@@ -276,7 +298,7 @@ nvm -v
 ```
 
 ```bash
-# ~/.bash_profile
+# ~/.bashrc
 if [ -s ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
 fi
