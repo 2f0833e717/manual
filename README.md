@@ -52,9 +52,13 @@ exit
 
 Windows Terminal
 ```bash
-
-wsl -l
+# settings default distro
 wsl -s Ubuntu-20.04
+
+# settings default distro view
+wsl -l
+
+# launch wsl
 wsl
 ```
 
@@ -80,7 +84,9 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/ubuntu/.p
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # reload wsl
+# on wsl
 exit
+# on Windows Terminal
 wsl
 ```
 
@@ -89,7 +95,7 @@ wsl
 brew update ; \
 brew upgrade ; \
 brew doctor ; \
-# brew prune  # old command @ Homebrew 1.9.0
+# brew prune  # is old command @ Homebrew 1.9.0
 brew cleanup ;
 ```
 
@@ -110,7 +116,9 @@ brew cleanup ;
 > <https://qiita.com/shizuma/items/2b2f873a0034839e47ce>
 
 ```bash
+# generate ssh key
 ssh-keygen -t rsa
+# => {Enter x 3}
 
 # Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
 # Created directory '/home/ubuntu/.ssh'.
@@ -132,9 +140,8 @@ ssh-keygen -t rsa
 # |      ... o.oo o.|
 # |       oo  =+ .  |
 # +----[SHA256]-----+
-{Enter x 3}
 
-# Windows(wsl)
+# Windows(wsl) only
 clip.exe < ~/.ssh/id_rsa.pub
 ```
 
@@ -155,9 +162,11 @@ Host github github.com
 ```
 
 ```bash
+# connection ssh
 ssh -T github
 
-# Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+# Are you sure you want to continue 
+# connecting (yes/no/[fingerprint])? yes
 yes
 ```
 
@@ -214,7 +223,7 @@ github cli manual
 
 ---
 
-## github get repositorys
+## github get repositorys (api)
 
 ```bash
 # user-name:2f0833e717
@@ -239,14 +248,14 @@ sed -e "s/\"\,$//"
 git commit -m "{commit-message}"
 ```
 
-feat: A new feature  
-fix: A bug fix  
-docs: Documentation only changes  
-style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)  
-refactor: A code change that neither fixes a bug nor adds a feature  
-perf: A code change that improves performance  
-test: Adding missing or correcting existing tests  
-chore: Changes to the build process or auxiliary tools and libraries such as documentation generation  
+`feat: `A new feature  
+`fix: `A bug fix  
+`docs: `Documentation only changes  
+`style: `Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)  
+`refactor: `A code change that neither fixes a bug nor adds a feature  
+`perf: `A code change that improves performance  
+`test: `Adding missing or correcting existing tests  
+`chore: `Changes to the build process or auxiliary tools and libraries such as documentation generation  
 > <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type>  
 
 ---
@@ -258,7 +267,11 @@ chore: Changes to the build process or auxiliary tools and libraries such as doc
 ```bash
 git clone https://github.com/creationix/nvm.git ~/.nvm
 source ~/.nvm/nvm.sh
+
+# install node lts version
 nvm install --lts
+
+# view nvm version
 nvm -v
 ```
 
@@ -275,7 +288,11 @@ fi
 > <https://github.com/thlorenz/doctoc>
 
 ```bash
+# sudo npm install -g doctoc # ?
 npm install -g doctoc
+
+# on root project folder
+# cd {project-folder}
 mkdir -p .github/workflows
 touch .github/workflows/toc.yml
 ```
