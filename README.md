@@ -26,6 +26,11 @@
   - [github cli install](#github-cli-install)
   - [github get repositorys (api)](#github-get-repositorys-api)
   - [git commit message sample](#git-commit-message-sample)
+- [Docker Manual](#docker-manual)
+  - [Docker Install](#docker-install)
+  - [Docker Uninstall](#docker-uninstall)
+  - [docker-compose install](#docker-compose-install)
+    - [python3 and pip install](#python3-and-pip-install)
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
   - [doctoc install](#doctoc-install)
@@ -279,6 +284,57 @@ perf: A code change that improves performance
 test: Adding missing or correcting existing tests  
 chore: Changes to the build process or auxiliary tools and libraries such as documentation generation  
 > <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type>  
+
+---
+
+# Docker Manual
+
+## Docker Install
+
+```bash
+# instant docker install shell
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# view docker version
+docker -v
+```
+
+---
+
+## Docker Uninstall
+
+```bash
+# docker uninstall
+sudo apt-get purge docker-ce docker-ce-cli containerd.io -y
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+```
+
+---
+
+## docker-compose install
+
+### python3 and pip install
+
+```bash
+# python3 and pip install
+sudo apt install python3 python3-pip -y
+
+# pip setting
+sudo pip3 install pip -U
+
+# view pip version
+pip -V
+```
+
+```bash
+# docker-compose install
+pip install docker-compose
+
+# view docker-compose version
+docker-compose -v
+```
 
 ---
 
