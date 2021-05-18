@@ -344,12 +344,39 @@ sudo pip3 install pip -U
 pip -V
 ```
 
+## Python仮想環境構築
+
+```bash
+sudo apt-get install python3-venv
+
+python3 -m venv env-docker-compose
+
+source env-docker-compose/bin/activate
+
+```
+
+## pipバグアップデート
+
+```bash
+pip install --upgrade pip setuptools
+```
+
+## docker-compose install
+
 ```bash
 # docker-compose install
 pip install docker-compose
 
 # view docker-compose version
 docker-compose -v
+```
+
+## Pythonのバージョン間の差異を解決するsixをインストール
+
+```bash
+sudo -H pip install -I six
+sudo pip uninstall docker-compose
+sudo pip install -I docker-compose
 ```
 
 ---
