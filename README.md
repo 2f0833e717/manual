@@ -359,6 +359,31 @@ python3 -m venv env
 
 # login env
 source env/bin/activate
+# or
+. env/bin/activate
+
+# exit env
+deactivate
+# or
+source ~/.bashrc
+```
+
+## Python virtualenv
+
+```bash
+# install virtualenv
+sudo pip install virtualenv
+
+# virsion
+virtualenv --version
+
+# create env
+virtualenv env
+
+# login env
+source env/bin/activate
+# or
+. env/bin/activate
 
 # exit env
 deactivate
