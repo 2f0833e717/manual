@@ -32,6 +32,7 @@
   - [docker-compose install](#docker-compose-install)
     - [python3 and pip install](#python3-and-pip-install)
   - [Python venv](#python-venv)
+  - [Python virtualenv](#python-virtualenv)
   - [pip bug update](#pip-bug-update)
   - [docker-compose install](#docker-compose-install-1)
   - [Python fix library version](#python-fix-library-version)
