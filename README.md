@@ -31,6 +31,10 @@
   - [Docker Uninstall](#docker-uninstall)
   - [docker-compose install](#docker-compose-install)
     - [python3 and pip install](#python3-and-pip-install)
+  - [Python仮想環境構築](#python%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89)
+  - [pipバグアップデート](#pip%E3%83%90%E3%82%B0%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88)
+  - [docker-compose install](#docker-compose-install-1)
+  - [Pythonのバージョン間の差異を解決するsixをインストール](#python%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%96%93%E3%81%AE%E5%B7%AE%E7%95%B0%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8Bsix%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
   - [doctoc install](#doctoc-install)
@@ -352,7 +356,6 @@ sudo apt-get install python3-venv
 python3 -m venv env-docker-compose
 
 source env-docker-compose/bin/activate
-
 ```
 
 ## pipバグアップデート
