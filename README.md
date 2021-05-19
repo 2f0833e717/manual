@@ -361,6 +361,7 @@ source env-docker-compose/bin/activate
 ## pipバグアップデート
 
 ```bash
+# pipバグアップデート
 pip install --upgrade pip setuptools
 ```
 
