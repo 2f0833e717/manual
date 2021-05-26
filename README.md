@@ -447,6 +447,18 @@ Golang playground
 
 ---
 
+# Java setup
+
+Java playground
+
+<https://code.labstack.com/java>
+
+```bash
+# TBD
+```
+
+---
+
 # npm Manual
 
 ## nvm install
