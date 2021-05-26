@@ -25,6 +25,7 @@
   - [setting .gitconfig](#setting-gitconfig)
   - [github cli install](#github-cli-install)
   - [github get repositorys (api)](#github-get-repositorys-api)
+  - [github commit rebase/autoSquash](#github-commit-rebaseautosquash)
   - [git commit message sample](#git-commit-message-sample)
 - [Docker Manual](#docker-manual)
   - [Docker Install](#docker-install)
@@ -32,9 +33,11 @@
   - [docker-compose install](#docker-compose-install)
     - [python3 and pip install](#python3-and-pip-install)
   - [Python venv](#python-venv)
+  - [Python virtualenv](#python-virtualenv)
   - [pip bug update](#pip-bug-update)
   - [docker-compose install](#docker-compose-install-1)
   - [Python fix library version](#python-fix-library-version)
+- [Golang setup](#golang-setup)
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
   - [doctoc install](#doctoc-install)
@@ -229,6 +232,11 @@ or
 ```bash
 git config --global user.email "skinoshita202001082135@gmail.com"
 git config --global user.name "2f0833e717"
+
+git config --global rebase.autosquash true
+# or
+git config --local rebase.autosquash true
+
 ```
 
 ---
@@ -284,6 +292,15 @@ curl -f -s -L https://api.github.com/users/2f0833e717/repos | \
 grep "clone_url" | \
 sed -e "s/\"clone_url\"\:\s\"//" | \
 sed -e "s/\"\,$//"
+```
+
+---
+
+## github commit rebase/autoSquash
+
+```bash
+git commit --fixup {commit-hash/HEAD/branch-name}
+git rebase -i --autosquash {commit-hash/HEAD/branch-name}
 ```
 
 ---
@@ -414,6 +431,18 @@ docker-compose -v
 sudo -H pip install -I six
 sudo pip uninstall docker-compose
 sudo pip install -I docker-compose
+```
+
+---
+
+# Golang setup
+
+Golang playground
+
+<https://play.golang.org/>
+
+```bash
+# TBD
 ```
 
 ---
