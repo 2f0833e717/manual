@@ -25,16 +25,20 @@
   - [setting .gitconfig](#setting-gitconfig)
   - [github cli install](#github-cli-install)
   - [github get repositorys (api)](#github-get-repositorys-api)
+  - [github commit rebase/autoSquash](#github-commit-rebaseautosquash)
   - [git commit message sample](#git-commit-message-sample)
 - [Docker Manual](#docker-manual)
   - [Docker Install](#docker-install)
   - [Docker Uninstall](#docker-uninstall)
   - [docker-compose install](#docker-compose-install)
     - [python3 and pip install](#python3-and-pip-install)
-  - [Python仮想環境構築](#python%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89)
-  - [pipバグアップデート](#pip%E3%83%90%E3%82%B0%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88)
+  - [Python venv](#python-venv)
+  - [Python virtualenv](#python-virtualenv)
+  - [pip bug update](#pip-bug-update)
   - [docker-compose install](#docker-compose-install-1)
-  - [Pythonのバージョン間の差異を解決するsixをインストール](#python%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%96%93%E3%81%AE%E5%B7%AE%E7%95%B0%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8Bsix%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
+  - [Python fix library version](#python-fix-library-version)
+- [Golang setup](#golang-setup)
+- [Java setup](#java-setup)
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
   - [doctoc install](#doctoc-install)
@@ -229,6 +233,11 @@ or
 ```bash
 git config --global user.email "skinoshita202001082135@gmail.com"
 git config --global user.name "2f0833e717"
+
+git config --global rebase.autosquash true
+# or
+git config --local rebase.autosquash true
+
 ```
 
 ---
@@ -284,6 +293,15 @@ curl -f -s -L https://api.github.com/users/2f0833e717/repos | \
 grep "clone_url" | \
 sed -e "s/\"clone_url\"\:\s\"//" | \
 sed -e "s/\"\,$//"
+```
+
+---
+
+## github commit rebase/autoSquash
+
+```bash
+git commit --fixup {commit-hash/HEAD/branch-name}
+git rebase -i --autosquash {commit-hash/HEAD/branch-name}
 ```
 
 ---
@@ -348,20 +366,53 @@ sudo pip3 install pip -U
 pip -V
 ```
 
-## Python仮想環境構築
+## Python venv
 
 ```bash
+# install venv
 sudo apt-get install python3-venv
 
-python3 -m venv env-docker-compose
+# create env
+python3 -m venv env
 
-source env-docker-compose/bin/activate
+# login env
+source env/bin/activate
+# or
+. env/bin/activate
+
+# exit env
+deactivate
+# or
+source ~/.bashrc
 ```
 
-## pipバグアップデート
+## Python virtualenv
 
 ```bash
-# pipバグアップデート
+# install virtualenv
+sudo pip install virtualenv
+
+# virsion
+virtualenv --version
+
+# create env
+virtualenv env
+
+# login env
+source env/bin/activate
+# or
+. env/bin/activate
+
+# exit env
+deactivate
+# or
+source ~/.bashrc
+```
+
+## pip bug update
+
+```bash
+# pip bug update
 pip install --upgrade pip setuptools
 ```
 
@@ -375,12 +426,44 @@ pip install docker-compose
 docker-compose -v
 ```
 
-## Pythonのバージョン間の差異を解決するsixをインストール
+## Python fix library version
 
 ```bash
 sudo -H pip install -I six
 sudo pip uninstall docker-compose
 sudo pip install -I docker-compose
+```
+
+---
+
+# Language setup
+
+```bash
+# TBD
+```
+
+---
+
+## Golang setup
+
+Golang playground
+
+<https://play.golang.org/>
+
+```bash
+# TBD
+```
+
+---
+
+## Java setup
+
+Java playground
+
+<https://code.labstack.com/java>
+
+```bash
+# TBD
 ```
 
 ---
