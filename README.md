@@ -38,6 +38,7 @@
   - [docker-compose install](#docker-compose-install-1)
   - [Python fix library version](#python-fix-library-version)
 - [Golang setup](#golang-setup)
+- [Java setup](#java-setup)
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
   - [doctoc install](#doctoc-install)
