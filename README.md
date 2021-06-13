@@ -665,6 +665,3 @@ TogglDesktop.exe
 
 ---
 
-
-
-
