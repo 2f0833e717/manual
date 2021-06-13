@@ -10,7 +10,6 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
 
 - [WSL Manual](#wsl-manual)
   - [wsl install](#wsl-install)
@@ -43,6 +42,21 @@
 - [npm Manual](#npm-manual)
   - [nvm install](#nvm-install)
   - [doctoc install](#doctoc-install)
+- [Time Tracking Tool Manual](#time-tracking-tool-manual)
+  - [ActivityWatch](#activitywatch)
+    - [Install Page](#install-page)
+      - [Zip](#zip)
+      - [Installer setup .exe](#installer-setup-exe)
+      - [Launch App](#launch-app)
+  - [ManicTime](#manictime)
+    - [Install Page](#install-page-1)
+      - [Zip](#zip-1)
+      - [Installer setup .exe](#installer-setup-exe-1)
+      - [Launch App](#launch-app-1)
+  - [Toggle Track (SaaS:Must Google Acount)](#toggle-track-saasmust-google-acount)
+    - [Install Page](#install-page-2)
+      - [Installer setup .exe](#installer-setup-exe-2)
+      - [Launch App](#launch-app-2)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -526,3 +540,131 @@ doctoc use
 ```bash
 doctoc .
 ```
+
+---
+
+# Time Tracking Tool Manual
+
+## ActivityWatch
+
+### Install Page
+> <https://github.com/ActivityWatch/activitywatch/releases>
+
+---
+
+#### Zip
+> <https://github.com/ActivityWatch/activitywatch/releases/download/v0.10.0/activitywatch-v0.10.0-windows-x86_64.zip>
+
+activitywatch-v0.10.0-windows-x86_64.zip
+
+---
+
+#### Installer setup .exe
+> <https://github.com/ActivityWatch/activitywatch/releases/download/v0.10.0/activitywatch-v0.10.0-windows-x86_64-setup.exe>
+
+activitywatch-v0.10.0-windows-x86_64-setup.exe
+
+---
+
+#### Launch App
+
+```
+aw-qt.exe
+```
+
+> <http://localhost:5600/#/>
+
+> <http://localhost:5600/#/timeline>
+
+> <http://localhost:5600/#/settings>
+
+Duration default value => 1h
+
+> <http://localhost:5600/#/activity/{hostname}/view/>
+
+Customize View Area.
+
+---
+
+## ManicTime
+
+
+### Install Page
+
+> <https://www.manictime.com/download/>
+
+---
+
+#### Zip
+> <https://cdn.manictime.com/setup/v4_6_16_0/ManicTimeUsb.zip>
+
+ManicTimeUsb.zip
+
+---
+
+#### Installer setup .exe
+> <https://cdn.manictime.com/setup/v4_6_16_0/ManicTime.exe>
+
+ManicTime.exe
+
+---
+
+#### Launch App
+
+```
+ManicTime.exe
+```
+
+```
+(設定)
+=> ManicTimeをこのPCでのみ使用(無料オプションを含む)
+=> スタンダード(無料)
+   無料版。一部の機能はご利用いただけません。
+=> 次へ
+続けますか
+=> はい
+ManicTimeの設定が正常に完了しました。
+=> OK
+```
+
+```
+(GUI)
+追跡
+[▶開始].click
+
+or
+
+(taskbar-menu)
+[追跡を開始].click
+```
+
+---
+
+## Toggle Track (SaaS:Must Google Acount)
+
+### Install Page
+
+#### Installer setup .exe
+> <https://toggl.com/track/toggl-desktop/downloads/TogglTrack-windows64.exe>
+
+TogglTrack-windows64.exe
+
+---
+
+#### Launch App
+
+```
+C:\Users\{user}\AppData\Local\TogglDesktop
+TogglDesktop.exe
+```
+
+```
+(設定)
+=> Record activitiy (i) => ON(toggle)
+```
+
+---
+
+
+
+
