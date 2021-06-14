@@ -81,8 +81,13 @@ ubuntu
 
 exit
 ```
+---
 
-Windows Terminal
+## Windows Terminal Install
+
+> <https://www.microsoft.com/ja-jp/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab>
+
+On Windows Terminal
 
 ```bash
 # settings default distro
@@ -94,6 +99,22 @@ wsl -l
 # launch wsl
 wsl
 ```
+
+---
+
+Windows Terminal Settings
+
+```bash
+Ctrl + ,
+```
+
+```bash
+⚙ JSON ファイルを開く
+```
+
+Copy And Paste
+
+> <https://github.com/2f0833e717/dotfile/blob/master/WindowsTerminalSettings/settings.json>
 
 ---
 
