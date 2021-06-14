@@ -14,6 +14,7 @@
 
 - [WSL Manual](#wsl-manual)
   - [wsl install](#wsl-install)
+  - [Windows Terminal Install](#windows-terminal-install)
   - [wsl uninstall](#wsl-uninstall)
   - [bash and dotfile settings](#bash-and-dotfile-settings)
   - [package install and update](#package-install-and-update)
